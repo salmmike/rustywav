@@ -54,6 +54,9 @@ There has to be a better way to do this, as many people seem to think Rust is aw
 I think I'll try to make a version two of this at some point when I have learned more, and see how much more easier this task is.
 (Well, knowing myself, it's pretty likely that that version 2 will never happen, but I'm sure I'll continue learning Rust anyways).
 
+I when I finished reading the Wav file, I tested it with a real WAV file.
+I only tested that I was able to get the RIFF and data header chunks correctly, and they seemed to be in place. I think this is enough for this session.
+
 The Rust error handling might get a bit of getting used to, as the borrow and move system.
 But, I think if I just use them enough, they'll be just fine.
 This is the same with all the other syntax too. Currently,
