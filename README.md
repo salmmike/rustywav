@@ -24,6 +24,8 @@ With Rust, I believe this would be more difficult.
 
 ## Thoughts during programming session
 
+### First time using rust
+
 My first task was to divide my library into a lib and src direcories.
 This was really easy, everything was handled by cargo almost automatically. I really think this is much faster than something like CMake (unless you have a script that does it for you).
 I think Cargo definately is one of the good things about Rust. Nice!
@@ -61,4 +63,15 @@ The Rust error handling might get a bit of getting used to, as the borrow and mo
 But, I think if I just use them enough, they'll be just fine.
 This is the same with all the other syntax too. Currently,
 I very much prefer the simple syntax of C and C++, but given that this is the first program I wrote in Rust, I guess that's expected. Maybe after 10 small programs, the syntax will be more familiar and nicer.
+
+### Second look at the program I just wrote.
+
+During the implementation of the first version of the small wav reader function, I learned about rust error handling.
+On the second go, I decided to refactor my code to better use the Rust type of way to handle errors.
+Previously I just used some asserts here and there to get the data checked, but now I return errors, like you're supposed to (I think).
+
+First thought about this way to handle errors is that it causes a bit of clutter on the code.
+I seem to need two levels of intendation for my whole function. I think this again is another thing that I can solve, but I haven't found about it yet.
+One way to deal with this would probably be to call yet another function in my read\_wav function,
+but it seems a bit dull to create two functions to do a single fairly simple task.
 
