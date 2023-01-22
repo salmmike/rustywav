@@ -21,7 +21,7 @@ fn main() {
             }
         }
     } else {
-        println!("Add wav path as argument!")
+        println!("Add wav path as argument!");
     }
 
 }
