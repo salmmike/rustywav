@@ -2,8 +2,6 @@
 
 My first Rust project, a library that reads a wav file, maybe even plays it at some point.
 
-# My thoughts while programming
-
 ## Initial thought about rust
 This is my attempt at learning Rust, which seems to be what all the cool kids are talking about.
 As a mostly C++ fan, my initial thought about Rust is that it makes simple things complicated to prevent memory leaks.
