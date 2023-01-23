@@ -75,3 +75,7 @@ I seem to need two levels of intendation for my whole function. I think this aga
 One way to deal with this would probably be to call yet another function in my read\_wav function,
 but it seems a bit dull to create two functions to do a single fairly simple task.
 
+
+### Third have at it
+I decided to refactor the error handling a bit more so that my file reader function would return the same type of error as my wav parser function.
+This helped with the issue I was facing previously.
