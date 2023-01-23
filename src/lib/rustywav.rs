@@ -41,7 +41,7 @@ pub fn read_binary(name: &String) -> std::result::Result<Vec<u8>, String> {
 pub fn as_u32(data: &[u8]) -> u32 {
     let mut res = 0;
 
-    for i in (0..3).rev() {
+    for i in (0..4).rev() {
         res |= (data[i] as u32) << 8*i;
     }
     res
@@ -57,11 +57,10 @@ pub fn as_u16(data: &[u8]) -> u16 {
 }
 
 pub fn read_wav(name: &String) -> std::result::Result<Wav, String> {
-
     let binary = read_binary(&name)?;
     let _header = WavHeader{
         riff: binary[0..4].to_vec(),
-        chunk_size: as_u32(&binary[4..7]),
+        chunk_size: as_u32(&binary[4..8]),
         wave: binary[8..12].to_vec(),
         fmt: binary[12..16].to_vec(),
         sub_chunk1_size: as_u32(&binary[16..20]),
@@ -98,5 +97,4 @@ pub fn read_wav(name: &String) -> std::result::Result<Wav, String> {
     };
 
     return Ok(wav);
-
 }
